@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Ex7 {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Map namesMap = new HashMap(); 
 		namesMap.put("a1234", "Steve Jobs");
 		namesMap.put("a1235", "Scott McNealy");
@@ -17,7 +17,8 @@ public class Ex7 {
 		System.out.println ("Escribe el ID:");
 		String id = scanner.nextLine();
 		String llave = id + " " + (String) namesMap.get(id);
-		
+		Ex7 ex = new Ex7();
+		ex.obtenerPersonaje(llave);
 	}
 	public void obtenerPersonaje(String llave) throws Exception {
 		System.out.println(llave);
